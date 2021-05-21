@@ -1,8 +1,20 @@
+@import url(/sprint-one/styles/mixer.scss);
 $BandSite-Black: #323232;
 $White: #ffffff;
+$paddingMobile: 16px;
+$paddingtop: 24px;
+
+
+
 main{
     display: grid;
     grid-template-columns:16px auto 16px auto 16px auto 16px auto 16px auto 16px auto 16px;
+}
+article{
+    padding-top: $paddingtop;
+    padding-bottom: $paddingMobile;
+    padding-left: $paddingMobile;
+    padding-right: $paddingMobile;
 }
 
 .logo{
@@ -48,6 +60,7 @@ main{
     height: 200px;
     width: auto;
     position: relative;
+    padding: 0;
 
     &__image{
     height: 200px;
@@ -65,16 +78,15 @@ main{
     line-height: 200px;
     }   
 }
+.section2__tittle{
+margin: 0 0 16px 0;
+
+
+}
 img{
     width: 100%;
 
 }
-.section2{
-    padding: 16px;
 
-
-
-
-}
 
 

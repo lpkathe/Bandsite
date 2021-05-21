@@ -1,6 +1,13 @@
+@import url(/sprint-one/styles/mixer.scss);
 main {
   display: grid;
   grid-template-columns: 16px auto 16px auto 16px auto 16px auto 16px auto 16px auto 16px; }
+
+article {
+  padding-top: 24px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px; }
 
 .logo {
   max-height: 20px;
@@ -41,7 +48,8 @@ main {
 .section1 {
   height: 200px;
   width: auto;
-  position: relative; }
+  position: relative;
+  padding: 0; }
   .section1__image {
     height: 200px;
     width: 100vw;
@@ -56,10 +64,10 @@ main {
     height: inherit;
     line-height: 200px; }
 
+.section2__tittle {
+  margin: 0 0 16px 0; }
+
 img {
   width: 100%; }
-
-.section2 {
-  padding: 16px; }
 
 /*# sourceMappingURL=style.css.map */
