@@ -1,0 +1,80 @@
+$BandSite-Black: #323232;
+$White: #ffffff;
+main{
+    display: grid;
+    grid-template-columns:16px auto 16px auto 16px auto 16px auto 16px auto 16px auto 16px;
+}
+
+.logo{
+    max-height: 20px;
+    max-width:120px;
+    margin: 4% auto;
+}
+.header{
+    display: flex;
+    background-color:$BandSite-Black;
+    flex-direction: column;
+    margin: 0;
+    width: 100vw;
+    height: fit-content;
+    &::after{
+        border: 5px solid $White;
+        content:"";
+        width: 50%;
+        
+    }
+
+    
+    &__link{
+        color: $White;
+        text-decoration: none;
+        
+    }
+    &__nav{
+        display: flex;
+        justify-content: space-around;
+        
+        
+        
+        &__tittle{
+            margin: 5%;
+            cursor: pointer;
+
+            
+        }
+    }
+}
+.section1{
+    height: 200px;
+    width: auto;
+    position: relative;
+
+    &__image{
+    height: 200px;
+    width: 100vw;
+    opacity: 50%;
+    }
+    &__tittle{
+    position: absolute;
+    z-index: 1;
+    color: $White;
+    top: 0px;
+    left: 5%;
+    margin-top: 0px;
+    height: inherit;
+    line-height: 200px;
+    }   
+}
+img{
+    width: 100%;
+
+}
+.section2{
+    padding: 16px;
+
+
+
+
+}
+
+
