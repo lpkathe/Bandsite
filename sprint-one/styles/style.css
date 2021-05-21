@@ -67,7 +67,8 @@ article {
 h2, h3 {
   margin: 0 0 16px 0; }
 
-img {
-  width: 100%; }
+.section4 img {
+  width: 100%;
+  padding-bottom: 16px; }
 
 /*# sourceMappingURL=style.css.map */

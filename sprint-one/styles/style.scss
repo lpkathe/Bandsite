@@ -81,8 +81,9 @@ article{
 h2, h3{
     margin: 0 0 $paddingGeneric 0;
 }
-img{
+.section4 img{
     width: 100%;
+    padding-bottom: $paddingGeneric;
 }
 
 
