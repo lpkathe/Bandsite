@@ -12,6 +12,16 @@
               align-items: center;
       border-bottom: 5px solid #ffffff; }
 
+  .section1 {
+    height: 500px;
+    padding-top: 0; }
+    .section1__tittle {
+      line-height: 500px;
+      font-size: 60px;
+      font-family: url("/sprint-one/assets/Font/AvenirNextLTPro-Bold.otf");
+      font-weight: 700;
+      margin: 0; }
+
   main {
     grid-template-columns: 36px auto 24px auto 36px; }
 

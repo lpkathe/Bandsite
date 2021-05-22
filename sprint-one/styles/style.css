@@ -85,7 +85,7 @@ article, footer {
   padding-left: 0;
   padding-right: 0; }
   .section1__image {
-    height: 200px;
+    height: 100%;
     width: 100vw;
     opacity: 50%; }
   .section1__tittle {

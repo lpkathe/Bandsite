@@ -82,7 +82,7 @@ grid-template-areas: ". tittle ."
     padding-right: 0;
 
     &__image{
-    height: 200px;
+    height: 100%;
     width: 100vw;
     opacity: 50%;
     }
@@ -95,6 +95,7 @@ grid-template-areas: ". tittle ."
     margin-top: 0px;
     height: inherit;
     line-height: 200px;
+    
     }  
 
 }
