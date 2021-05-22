@@ -1,37 +1,4 @@
-$BandSite-Black: #323232;
-$White: #ffffff;
-$paddingGeneric: 16px;
-$paddingtop: 24px;
-@mixin header-section{
-    font-size: 24px;
-    line-height: 32px;
-    font-family: url("/sprint-one/assets/Font/AvenirNextLTPro-Bold.otf");
-    font-weight: 700;
-}
-@mixin sub-header{
-    font-size: 14px;
-    line-height: 22px;
-    font-family: url("/sprint-one/assets/Font/AvenirNextLTPro-Demi.otf");
-    font-weight: 600;
-}
-@mixin body-footer{
-    font-size: 13px;
-    line-height: 18px;
-    font-family: url("/sprint-one/assets/Font/AvenirNextLTPro-Regular.otf");
-    font-weight: 400;
-}
-@mixin labels{
-    font-size: 10px;
-    line-height: 20px;
-    font-family: url("/sprint-one/assets/Font/AvenirNextLTPro-Bold.otf");
-    font-weight: 700;
-}
-
-@mixin padding-container{
-    padding-top: $paddingtop;
-    padding-left: $paddingGeneric;
-    padding-right: $paddingGeneric;
-}
+@import "variable&mixing.scss";
 
 main{
     display: grid;
@@ -43,14 +10,32 @@ article, footer{
 }
 
 .tittle-text{
-    @include header-section
+    @include header-section;
+
+}
+.column1-paragraph{
+    grid-area: paragraph1;
+}
+.column2-paragraph{
+    grid-area: paragraph2;
+}
+.tittle-paragraph{
+    grid-area: tittle;
 }
 
 .sub-text{
-    @include sub-header
+    @include sub-header;
 }
 .text{
-@include body-footer
+@include body-footer;
+display: grid;
+grid-template-columns:16px auto 16px;
+grid-template-rows:auto auto auto;
+grid-template-areas: ". tittle ." 
+". paragraph1 ." 
+". paragraph2 ."
+;
+
 }
 
 .logo{

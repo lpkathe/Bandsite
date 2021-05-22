@@ -1,0 +1,28 @@
+@media (min-width: 768px) {
+  .header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+    .header::after {
+      border: none; }
+    .header__nav {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      border-bottom: 5px solid #ffffff; }
+
+  main {
+    grid-template-columns: 36px auto 24px auto 36px; }
+
+  .text {
+    font-size: 13px;
+    line-height: 18px;
+    font-family: url("/sprint-one/assets/Font/AvenirNextLTPro-Regular.otf");
+    font-weight: 400;
+    display: grid;
+    grid-template-columns: 36px auto 24px auto 36px;
+    grid-template-rows: auto auto;
+    grid-template-areas: ". tittle . . ." ". paragraph1 . paragraph2 ."; } }
+
+/*# sourceMappingURL=tablet.css.map */

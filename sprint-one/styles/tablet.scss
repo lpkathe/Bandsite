@@ -1,0 +1,28 @@
+@import "variable&mixing.scss";
+
+@media(min-width:768px){ 
+    .header{
+        flex-direction: row;
+        &::after{
+            border: none;}
+        &__nav{
+            align-items: center;
+            border-bottom: 5px solid $White;
+            
+        }
+        
+    }
+    main{
+        grid-template-columns:36px auto 24px auto 36px;
+    }
+    .text{
+        @include body-footer;
+        display: grid;
+        grid-template-columns:36px auto 24px auto 36px;
+        grid-template-rows:auto auto;
+        grid-template-areas: ". tittle . . ." 
+        ". paragraph1 . paragraph2 ."
+        ;
+        
+        }
+}
