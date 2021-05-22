@@ -1,9 +1,8 @@
-@import url(/sprint-one/styles/mixer.scss);
 main {
   display: grid;
   grid-template-columns: 16px auto 16px auto 16px auto 16px auto 16px auto 16px auto 16px; }
 
-article {
+article, footer {
   padding-top: 24px;
   padding-left: 16px;
   padding-right: 16px; }
@@ -64,11 +63,43 @@ article {
     height: inherit;
     line-height: 200px; }
 
+.section2__image {
+  width: 100%; }
+
 h2, h3 {
   margin: 0 0 16px 0; }
 
 .section4 img {
   width: 100%;
   padding-bottom: 16px; }
+
+.footer {
+  background-color: #323232;
+  color: #ffffff; }
+  .footer p {
+    margin: 0;
+    padding-bottom: 16px; }
+  .footer h2 {
+    margin-bottom: 0; }
+
+span {
+  display: block; }
+
+.strong-text {
+  font-weight: 700; }
+
+p:last-child {
+  margin: 0;
+  padding-bottom: 16px; }
+
+.icons {
+  padding: 16px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 40%; }
 
 /*# sourceMappingURL=style.css.map */

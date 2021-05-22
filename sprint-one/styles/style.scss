@@ -1,8 +1,18 @@
-@import url(/sprint-one/styles/mixer.scss);
 $BandSite-Black: #323232;
 $White: #ffffff;
 $paddingGeneric: 16px;
 $paddingtop: 24px;
+
+@mixin demi{
+    font-size: 14px;
+    line-height: 22px;
+    font-family: url("/sprint-one/assets/Font/AvenirNextLTPro-Demi.otf");
+}
+@mixin padding-container{
+    padding-top: $paddingtop;
+    padding-left: $paddingGeneric;
+    padding-right: $paddingGeneric;
+}
 
 
 
@@ -10,10 +20,8 @@ main{
     display: grid;
     grid-template-columns:16px auto 16px auto 16px auto 16px auto 16px auto 16px auto 16px;
 }
-article{
-    padding-top: $paddingtop;
-    padding-left: $paddingGeneric;
-    padding-right: $paddingGeneric;
+article, footer{
+    @include padding-container;
 }
 
 .logo{
@@ -78,6 +86,9 @@ article{
     line-height: 200px;
     }   
 }
+.section2__image{
+    width: 100%;
+}
 h2, h3{
     margin: 0 0 $paddingGeneric 0;
 }
@@ -85,7 +96,38 @@ h2, h3{
     width: 100%;
     padding-bottom: $paddingGeneric;
 }
+.footer{
+    background-color:$BandSite-Black;
+    color: $White;
 
+    & p{
+        margin: 0;
+        padding-bottom: $paddingGeneric;
+    }
+
+    & h2{
+        margin-bottom: 0;
+    }
+
+}
+span{
+display: block;
+}
+
+.strong-text{
+    font-weight: 700;
+}
+p:last-child{
+    margin: 0;
+    padding-bottom: $paddingGeneric;
+}
+.icons{
+    padding: $paddingGeneric 0;
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    
+}
 
 
 
