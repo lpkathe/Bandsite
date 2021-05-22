@@ -2,26 +2,55 @@ $BandSite-Black: #323232;
 $White: #ffffff;
 $paddingGeneric: 16px;
 $paddingtop: 24px;
-
-@mixin demi{
+@mixin header-section{
+    font-size: 24px;
+    line-height: 32px;
+    font-family: url("/sprint-one/assets/Font/AvenirNextLTPro-Bold.otf");
+    font-weight: 700;
+}
+@mixin sub-header{
     font-size: 14px;
     line-height: 22px;
     font-family: url("/sprint-one/assets/Font/AvenirNextLTPro-Demi.otf");
+    font-weight: 600;
 }
+@mixin body-footer{
+    font-size: 13px;
+    line-height: 18px;
+    font-family: url("/sprint-one/assets/Font/AvenirNextLTPro-Regular.otf");
+    font-weight: 400;
+}
+@mixin labels{
+    font-size: 10px;
+    line-height: 20px;
+    font-family: url("/sprint-one/assets/Font/AvenirNextLTPro-Bold.otf");
+    font-weight: 700;
+}
+
 @mixin padding-container{
     padding-top: $paddingtop;
     padding-left: $paddingGeneric;
     padding-right: $paddingGeneric;
 }
 
-
-
 main{
     display: grid;
     grid-template-columns:16px auto 16px auto 16px auto 16px auto 16px auto 16px auto 16px;
 }
+
 article, footer{
     @include padding-container;
+}
+
+.tittle-text{
+    @include header-section
+}
+
+.sub-text{
+    @include sub-header
+}
+.text{
+@include body-footer
 }
 
 .logo{
@@ -29,6 +58,7 @@ article, footer{
     max-width:120px;
     margin: 4% auto;
 }
+
 .header{
     display: flex;
     background-color:$BandSite-Black;
@@ -36,30 +66,26 @@ article, footer{
     margin: 0;
     width: 100vw;
     height: fit-content;
+
     &::after{
         border: 5px solid $White;
         content:"";
-        width: 50%;
-        
+        width: 50%;   
     }
 
-    
     &__link{
         color: $White;
         text-decoration: none;
-        
+        @include header-section
     }
+
     &__nav{
         display: flex;
         justify-content: space-around;
         
-        
-        
         &__tittle{
             margin: 5%;
-            cursor: pointer;
-
-            
+            cursor: pointer;   
         }
     }
 }
@@ -84,18 +110,22 @@ article, footer{
     margin-top: 0px;
     height: inherit;
     line-height: 200px;
-    }   
+    }  
+
 }
 .section2__image{
     width: 100%;
 }
+
 h2, h3{
     margin: 0 0 $paddingGeneric 0;
 }
+
 .section4 img{
     width: 100%;
     padding-bottom: $paddingGeneric;
 }
+
 .footer{
     background-color:$BandSite-Black;
     color: $White;
@@ -110,23 +140,25 @@ h2, h3{
     }
 
 }
+
 span{
-display: block;
+    display: block;
 }
 
 .strong-text{
     font-weight: 700;
 }
+
 p:last-child{
     margin: 0;
     padding-bottom: $paddingGeneric;
 }
+
 .icons{
     padding: $paddingGeneric 0;
     display: flex;
     justify-content: space-between;
     width: 40%;
-    
 }
 
 
