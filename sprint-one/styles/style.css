@@ -7,12 +7,6 @@ article, footer {
   padding-left: 16px;
   padding-right: 16px; }
 
-.tittle-text {
-  font-size: 24px;
-  line-height: 32px;
-  font-family: url("/sprint-one/assets/Font/AvenirNextLTPro-Bold.otf");
-  font-weight: 700; }
-
 .column1-paragraph {
   grid-area: paragraph1; }
 
@@ -98,6 +92,11 @@ article, footer {
     height: inherit;
     line-height: 200px; }
 
+.section2__tittle {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: url("/sprint-one/assets/Font/AvenirNextLTPro-Bold.otf");
+  font-weight: 700; }
 .section2__image {
   width: 100%; }
 

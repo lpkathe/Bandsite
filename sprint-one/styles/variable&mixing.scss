@@ -2,6 +2,8 @@ $BandSite-Black: #323232;
 $White: #ffffff;
 $paddingGeneric: 16px;
 $paddingtop: 24px;
+$paddingGeneric-tablet: 36px;
+$paddingtop-tablet: 48px;
 @mixin header-section{
     font-size: 24px;
     line-height: 32px;
@@ -57,8 +59,12 @@ $paddingtop: 24px;
     font-family: url("/sprint-one/assets/Font/AvenirNextLTPro-Bold.otf");
     font-weight: 700;
 }
-@mixin padding-container{
-    padding-top: $paddingtop;
-    padding-left: $paddingGeneric;
-    padding-right: $paddingGeneric;
+@mixin padding-container-tablet{
+    padding-top: $paddingtop-tablet;
+    padding-left: $paddingGeneric-tablet;
+    padding-right: $paddingGeneric-tablet;
 }
+
+
+
+

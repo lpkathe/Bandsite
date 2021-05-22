@@ -9,10 +9,6 @@ article, footer{
     @include padding-container;
 }
 
-.tittle-text{
-    @include header-section;
-
-}
 .column1-paragraph{
     grid-area: paragraph1;
 }
@@ -99,8 +95,13 @@ grid-template-areas: ". tittle ."
     }  
 
 }
-.section2__image{
-    width: 100%;
+.section2{
+    &__tittle {
+        @include header-section;
+    }
+    &__image{
+        width: 100%;
+    }
 }
 
 h2, h3{

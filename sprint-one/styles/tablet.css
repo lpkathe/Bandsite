@@ -22,6 +22,11 @@
       font-weight: 700;
       margin: 0; }
 
+  article, footer {
+    padding-top: 48px;
+    padding-left: 36px;
+    padding-right: 36px; }
+
   main {
     grid-template-columns: 36px auto 24px auto 36px; }
 
@@ -33,6 +38,10 @@
     display: grid;
     grid-template-columns: 36px auto 24px auto 36px;
     grid-template-rows: auto auto;
-    grid-template-areas: ". tittle . . ." ". paragraph1 . paragraph2 ."; } }
+    grid-template-areas: ". tittle . . ." ". paragraph1 . paragraph2 ."; }
+
+  .section2__column {
+    width: 80%;
+    margin: 0 auto; } }
 
 /*# sourceMappingURL=tablet.css.map */

@@ -1,7 +1,9 @@
 @import "variable&mixing.scss";
 
+
 @media(min-width:768px){ 
     .header{
+        
         flex-direction: row;
         &::after{
             border: none;}
@@ -20,10 +22,10 @@
             @include header-desktop;
             margin: 0;
         }
+    }
 
-
-
-
+    article, footer{
+        @include padding-container-tablet;
     }
     main{
         grid-template-columns:36px auto 24px auto 36px;
@@ -38,4 +40,14 @@
         ;
         
         }
+.section2{
+        &__column{
+        width: 80%;
+        margin: 0 auto;
+        }
+        
+
+
+
+}
 }
