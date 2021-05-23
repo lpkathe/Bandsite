@@ -1,0 +1,70 @@
+@media(min-width:1280px){ 
+
+  $paddingGeneric-desktop: 36px;
+  $paddingtop-desktop: 48px;
+
+  @mixin padding-container{
+    padding-top: $paddingtop-desktop;
+    padding-left: $paddingGeneric-desktop;
+    padding-right: $paddingGeneric-desktop;
+}
+
+  article, footer {
+    @include padding-container;
+  }
+
+  .logo {
+    margin: 2% 3% 2% 8%;
+  }
+  .header {
+
+    &__nav {
+      width: 12%;
+
+      &__title {
+      justify-content: space-evenly;
+      }
+    }
+
+  }
+
+  .section2{
+    margin: 0 auto;
+    width: 85%;
+
+    &__image {
+      max-height: 500px;
+    }
+
+    &__text {
+      width: 70%;
+    }
+  }
+
+  .section3 {
+    margin: 0 auto;
+    width: 68%;
+  }
+
+  .section4 {
+    padding: 48px 10% 36px 10%;
+
+  }
+
+  .footer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "title icons . logo"
+      "text text text ."
+      "copyright copyright copyright .";
+
+      &__logo {
+        grid-column-start: 4;
+        grid-column-end: 4;
+      }
+
+      &__text {
+        width: 80%;
+      }
+  }
+}

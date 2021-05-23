@@ -1,43 +1,82 @@
-@import "variable&mixing.scss";
+$BandSite-Black: #323232;
+$Silver: #AFAFAF;
+$White: #ffffff;
+$BandSite-DarkBlack: #000000;
+$Mercury: #E1E1E1;
+$Alabaster: #FAFAFA;
+$paddingGeneric: 16px;
+$paddingtop: 24px;
 
-main{
-    display: grid;
-    grid-template-columns:16px auto 16px auto 16px auto 16px auto 16px auto 16px auto 16px;
+@mixin header-section{
+    font-size: 24px;
+    line-height: 32px;
+    font-family: url("/sprint-one/assets/Font/AvenirNextLTPro-Bold.otf");
+    font-weight: 700;
+}
+
+@mixin sub-header{
+    font-size: 14px;
+    line-height: 22px;
+    font-family: url("/sprint-one/assets/Font/AvenirNextLTPro-Demi.otf");
+    font-weight: 600;
+}
+
+@mixin body-footer{
+    font-size: 13px;
+    line-height: 18px;
+    font-family: url("/sprint-one/assets/Font/AvenirNextLTPro-Regular.otf");
+    font-weight: 400;
+}
+
+@mixin padding-container{
+    padding-top: $paddingtop;
+    padding-left: $paddingGeneric;
+    padding-right: $paddingGeneric;
+}
+
+main {
+    color: $BandSite-Black;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+
+    &:active {
+        color: $White;
+        font-weight: bolder;
+    }
+
+    &:hover {
+        color: $BandSite-DarkBlack;
+    }
+
+    &:disabled {
+        color: $Silver;
+    }
 }
 
 article, footer{
     @include padding-container;
 }
 
-.column1-paragraph{
-    grid-area: paragraph1;
-}
-.column2-paragraph{
-    grid-area: paragraph2;
-}
-.tittle-paragraph{
-    grid-area: tittle;
+h2, h3{
+    margin: 0 0 $paddingGeneric 0;
 }
 
-.sub-text{
-    @include sub-header;
+span{
+    display: block;
 }
-.text{
-@include body-footer;
-display: grid;
-grid-template-columns:16px auto 16px;
-grid-template-rows:auto auto auto;
-grid-template-areas: ". tittle ." 
-". paragraph1 ." 
-". paragraph2 ."
-;
 
+p:last-child{
+    margin: 0;
+    padding-bottom: $paddingGeneric;
 }
 
 .logo{
-    max-height: 20px;
-    max-width:120px;
     margin: 4% auto;
+    max-height: 20px;
+    max-width: 120px;
 }
 
 .header{
@@ -48,97 +87,126 @@ grid-template-areas: ". tittle ."
     width: 100vw;
     height: fit-content;
 
-    &::after{
-        border: 5px solid $White;
-        content:"";
+    &::after {
         width: 50%;   
+        content:"";
+        border-bottom: 5px solid $White;
     }
 
-    &__link{
+    &__link {
         color: $White;
-        text-decoration: none;
-        @include header-section
+        @include sub-header;
     }
-
-    &__nav{
+    
+    &__nav {
         display: flex;
         justify-content: space-around;
-        
-        &__tittle{
-            margin: 5%;
-            cursor: pointer;   
+
+        &__title{
+            margin-bottom: 2%;
         }
     }
 }
+
+#linkShows {
+    &:link {
+        color: $Mercury;
+    }
+}
+
 .section1{
-    height: 200px;
+    padding: 0;
+    height: 50%;
     width: auto;
     position: relative;
-    padding-left: 0;
-    padding-right: 0;
 
     &__image{
-    height: 100%;
-    width: 100vw;
-    opacity: 50%;
+        height: 100%;
+        width: 100vw;
+        opacity: 50%;
     }
-    &__tittle{
-    position: absolute;
-    z-index: 1;
-    color: $White;
-    top: 0px;
-    left: 5%;
-    margin-top: 0px;
-    height: inherit;
-    line-height: 200px;
-    
-    }  
 
+    &__title{
+        top: 42%;
+        left: 5%;
+        margin: 0px;
+        color: $White;
+        position: absolute;
+        z-index: 1;
+        @include header-section;
+    }  
 }
+
 .section2{
-    &__tittle {
+    &__title {
         @include header-section;
     }
+
     &__image{
         width: 100%;
     }
+
+    &__text{
+        @include sub-header;
+    }
 }
 
-h2, h3{
-    margin: 0 0 $paddingGeneric 0;
+.section3 {
+    margin: 0 auto;
+    
+    &__title {
+        @include sub-header;
+    }
+    
+    &__paragraph1 {
+        @include body-footer;
+    }
+
+    &__paragraph2 {
+        @include body-footer;
+    }
 }
 
-.section4 img{
-    width: 100%;
-    padding-bottom: $paddingGeneric;
+.section4 {
+    background-color: $Mercury;
+
+    &__title {
+        @include header-section;
+    }
+    
+    & img {
+        width: 100%;
+        padding-bottom: $paddingGeneric;
+    }
 }
 
-.footer{
+.footer {
     background-color:$BandSite-Black;
     color: $White;
 
-    & p{
+    & p {
         margin: 0;
         padding-bottom: $paddingGeneric;
+        @include body-footer;
     }
 
-    & h2{
+    & a {
+        color: $White;
+    }
+
+    &__title {
         margin-bottom: 0;
+        @include header-section;
     }
 
-}
+    &__text {
+        padding-bottom: 9%;
+    }
 
-span{
-    display: block;
 }
 
 .strong-text{
-    font-weight: 700;
-}
-
-p:last-child{
-    margin: 0;
-    padding-bottom: $paddingGeneric;
+    font-weight: bolder;
 }
 
 .icons{
@@ -147,6 +215,3 @@ p:last-child{
     justify-content: space-between;
     width: 40%;
 }
-
-
-

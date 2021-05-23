@@ -1,53 +1,219 @@
-@import "variable&mixing.scss";
-
-
 @media(min-width:768px){ 
-    .header{
-        
+    $BandSite-Black: #323232;
+    $Silver: #AFAFAF;
+    $White: #ffffff;
+    $BandSite-DarkBlack: #000000;
+    $Mercury: #E1E1E1;
+    $Alabaster: #FAFAFA;
+    $paddingGeneric-tablet: 24px;
+    $paddingtop-tablet: 48px;
+
+    @mixin header-desktop{
+        font-size: 60px;
+        line-height: 68px;
+        font-family: url("/sprint-one/assets/Font/AvenirNextLTPro-Bold.otf");
+        font-weight: 700;
+    }
+
+    @mixin section-header{
+        font-size: 36px;
+        line-height: 32px;
+        font-family: url("/sprint-one/assets/Font/AvenirNextLTPro-Demi.otf");
+        font-weight: 600;
+    }
+
+    @mixin sub-header{
+        font-size: 24px;
+        line-height: 32px;
+        font-family: url("/sprint-one/assets/Font/AvenirNextLTPro-Regular.otf");
+        font-weight: 400;
+    }
+
+    @mixin body-footer{
+        font-size: 14px;
+        line-height: 22px;
+        font-family: url("/sprint-one/assets/Font/AvenirNextLTPro-Regular.otf");
+        font-weight: 400;
+    }
+
+    @mixin padding-container{
+        padding-top: $paddingtop-tablet;
+        padding-left: $paddingGeneric-tablet;
+        padding-right: $paddingGeneric-tablet;
+    }
+
+    @mixin grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        gap: $paddingGeneric-tablet;
+    }
+
+    .logo {
+        margin: 4% 5%;
+    }
+
+    h2, h3{
+        margin: 0 0 $paddingGeneric-tablet 0;
+    }
+
+    article, footer {
+        @include padding-container;
+    }
+
+    .header {
+        align-items: unset;
         flex-direction: row;
-        &::after{
-            border: none;}
-        &__nav{
-            align-items: center;
-            border-bottom: 5px solid $White;
-            
+
+        &::after {
+            border: none;
+            content: none;
         }
         
+        &__nav {
+            width: 20%;
+            display: inherit;
+            align-items: center;
+            
+            &__title {
+                height: 100%;
+                display: flex;
+                align-items: center;
+
+                &:hover {
+                    border-bottom: 5px solid $White;
+                }
+            }
+        }
     }
+       
     .section1{
-        height: 500px;
         padding-top: 0;
-        &__tittle{
+
+        &__title{
+            margin: 0;
             line-height: 500px;
             @include header-desktop;
-            margin: 0;
+        }
+
+        &__image {
+            max-height: 600px;
         }
     }
 
-    article, footer{
-        @include padding-container-tablet;
-    }
-    main{
-        grid-template-columns:36px auto 24px auto 36px;
-    }
-    .text{
-        @include body-footer;
-        display: grid;
-        grid-template-columns:36px auto 24px auto 36px;
-        grid-template-rows:auto auto;
-        grid-template-areas: ". tittle . . ." 
-        ". paragraph1 . paragraph2 ."
-        ;
-        
+    .section2{
+        &__title {
+            @include section-header;
         }
-.section2{
-        &__column{
+
+        &__column {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        &__text {
+         @include sub-header;
+        }
+    }
+
+    .section3{
         width: 80%;
-        margin: 0 auto;
+
+        &__title {
+            @include sub-header;
         }
-        
 
+        &__text{
+            padding-bottom: $paddingGeneric-tablet;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            gap: $paddingGeneric-tablet;
+            @include body-footer;
+        }
 
+        &__paragraph1{
+            margin-top: 0;
+            @include body-footer;
+        }
 
-}
+        &__paragraph2 {
+            @include body-footer;
+        }
+    }
+
+    .section4 {
+        &__gallery {
+        @include grid;
+        }
+
+        &__title {
+            @include section-header;
+        }
+    }
+
+    .footer {
+        display: grid;
+        grid-template-rows: 1fr auto 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "title icons logo"
+        "text text text"
+        "copyright copyright copyright";
+        align-items: center;
+
+        &__title {
+            grid-area: "title";
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 1;
+            grid-row-end: 1;
+            @include section-header;
+        }
+
+        &__icons {
+            grid-area: "icons";
+            grid-column-start: 2;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 1;
+        }
+
+        &__text {
+            margin: $paddingGeneric-tablet 0;
+            padding-bottom: 0;
+            grid-area: "text";
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 2;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__logo {
+            grid-area: "logo";
+            grid-column-start: 3;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 1;
+            justify-self: end;
+        }
+
+        &__copyright {
+            grid-area: "copyright";
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 3;
+        }
+
+        & p {
+            margin: 0 auto;
+
+            &:last-child {
+                margin-left: 0;
+            }
+        }
+    }
 }
