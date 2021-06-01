@@ -1,0 +1,218 @@
+//Header and Footer Styles.
+@import "partial";
+
+.logo{
+  margin: 4% auto;
+  @include logo-size;
+}
+
+.nav {
+  margin: 0;
+  height: fit-content;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background-color: $primary-color-1;
+
+  &__link {
+    @include link-style;
+
+    &:hover {
+      color: $secondary-color-2;
+    }
+  }
+  
+  &__options {
+      display: flex;
+      justify-content: space-around;
+
+      & h3 {
+        margin: 0;
+        padding: 0;
+        height: inherit;
+        width: 50vw;
+        text-align: center;
+      }
+  }
+}
+
+.footer {
+  padding-bottom: 1%;
+  background-color:$primary-color-1;
+  color: $primary-color-3;
+
+  & a {
+    @include link-style;
+  }
+
+  & span {
+    display: block;
+    line-height: 1.2em;
+    font-size: 1em;
+  }
+
+  &__title {
+      margin: 2% 0 0 0;
+      font-weight: normal;
+  }
+
+  &__text {
+      padding-bottom: 9%;
+  }
+  
+  &__info {
+    margin-bottom: 6%;
+  }
+
+  &__logo {
+    margin-top: 15%;
+  }
+}
+
+.strong-text{
+  font-weight: bolder;
+}
+
+.icons{
+  margin-bottom: 7%;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+// Special classes for active section 
+
+.link-inactive {
+   align-self: center;
+   display: flex;
+   flex-direction: column;
+   font-weight: bolder;
+
+   & a {
+    color: $primary-color-2;
+   }
+}
+
+.link-active {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  color: $primary-color-3;
+  font-weight: bolder;
+
+  &::after {
+    width: 100%;   
+    content:"";
+    border-bottom: 0.3em solid $primary-color-3;
+  }
+}
+
+// End to special classes for active section view
+
+// Media query for global classes correspondent to tablets.
+@mixin tablet-global {
+  @media(min-width:768px){ 
+
+    html {
+      @include tablet-desktop-fonts;
+    }
+
+    .logo {
+      margin: 4%;
+    }
+    
+    .nav {
+      height: 7em;
+      align-items: center;
+      flex-direction: row;
+      
+      &__options {
+          margin-left: 5em;
+          width: 20%;
+          height: 100%;
+      }
+      
+      & h3 {
+          font-size: 1.4em; //It decreases so it can coincide with the mockup.
+          width: fit-content;
+      }
+    }
+
+
+    .link-inactive {
+      margin: auto;
+    }
+    
+    .footer {
+      padding: 5% 5% 0 5%;
+      width: 100%;
+      display: inline-block;
+      position: relative;
+      
+      &__title {
+          margin: 0 3% 0 0;
+          line-height: 1em;
+          font-size: 2.7em;
+          width: fit-content;
+          display: inline-block;
+      }
+      
+      &__text {
+          margin-top:2%;
+          padding-bottom: 0;
+          display: flex;
+          font-size: 0.8em;
+          justify-content: space-between;
+      }
+      
+      &__logo {
+          top: 1em;
+          right: 5.5em;
+          position: absolute;
+      }
+      
+      &__copyright {
+          font-size: 1em;
+      }
+    }
+
+    .icons {
+      margin-bottom: 0;
+      width: 13%;
+      display: inline-flex;
+      font-size: 1.7em;
+    }
+  }
+}
+
+// Desktop media query
+@mixin desktop-global {
+  @media(min-width:1280px){ 
+
+    html {
+      @include tablet-desktop-fonts;
+    }
+
+    article {
+      @include padding(1280px);
+      @include padding-top(1280);
+    }
+
+    .footer {
+      &__title {
+          margin: 0px 11% 0 0;
+      }
+
+      &__text {
+          width: 69%;
+      }
+    }
+
+    .nav {
+      &__options{
+        height: fit-content;
+      }
+    }
+  }
+}
