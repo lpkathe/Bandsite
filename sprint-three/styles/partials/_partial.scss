@@ -1,0 +1,51 @@
+$primary-color-1: #323232;
+$primary-color-2: #AFAFAF;
+$primary-color-3: #ffffff;
+
+$secondary-color-1: #000000;
+$secondary-color-2: #E1E1E1;
+$secondary-color-3: #FAFAFA;
+
+@mixin padding-top($screen-width){
+    @if $screen-width >= 768px {
+        padding-top: 4.8em;
+    } @else {
+        padding-top: 2.4em;
+    }
+}
+
+@mixin padding($screen-width){
+    @if $screen-width >= 768px {
+        padding-left: 3.6em;
+        padding-right: 3.6em;
+    } @else {
+        padding-left: 1.6em;
+        padding-right: 1.6em;
+    }
+}
+
+@mixin logo-size {
+    max-height: 20px;
+    max-width: 120px;
+}
+
+@mixin link-style {
+    text-decoration: none;
+    cursor: pointer;
+    color: $primary-color-3;
+}
+
+@mixin button {
+    margin-top: 2%;
+    height: 40px;
+    background-color: $primary-color-1;
+    color: $primary-color-3;
+    border-radius: 0.4em;
+    border: none;
+    font-size: 1.5em;
+}
+
+@mixin line {
+    margin: 5% 0;
+    border: 1px solid $secondary-color-2;
+}

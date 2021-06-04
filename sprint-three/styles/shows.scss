@@ -1,0 +1,272 @@
+@import "./partials/typography";
+@import "./partials/partial";
+@import "./partials/global";
+
+
+html {
+    font-size: 10px;
+    @include mobile-fonts;
+}
+
+.header {
+    height: 31em;
+    width: 100%;
+    color: $primary-color-3;
+    position: relative;
+
+    & h3 {
+        font-weight: lighter;
+    }
+
+    &__title{
+        line-height: 1.5em;
+        color: $primary-color-3;
+    }  
+
+    &__iframe {
+        margin: 0 auto;
+    }
+
+    &__image{
+        top: 0;
+        left: 0;
+        margin: 0;
+        height: 31em;
+        width: 100vw;
+        position: absolute;
+        box-sizing: border-box;
+    }
+
+    &__text {
+        top: 0;
+        left: 0;
+        padding: 5%;
+        position: absolute;
+    }
+
+    &__overlay {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 50%;
+        position: absolute;
+        background-color: $primary-color-1;
+    }
+}
+
+.shows {
+    &__section {
+        @include padding(320px);
+    }
+
+    &__title {
+        font-size: 3.4em;
+        line-height: 2em;
+        margin-bottom: 0;
+    }
+
+    &__titles {
+        margin: 2% 0 1% 0;
+        display: block;
+        text-transform: uppercase;
+        color: $primary-color-2;
+    }
+
+    &__value {
+        margin: 0 0 5% 0;
+    }
+
+    &__button {
+        width: 100%;
+        @include button;
+
+        &:hover {
+            background-color: $secondary-color-1;
+        }
+    }
+}
+
+.line {
+    @include line;
+}
+
+.footer {
+    margin-top: 5%;
+    @include padding(320px);
+
+}
+
+// Tablet media query
+@media(min-width:768px){ 
+    
+    @include tablet-global; // Styles are in global.
+
+    .header{
+        height: 48em;
+
+        &__image {
+            height: 48em;
+        }
+
+        &__text{
+            margin: 2% 0 0 5%;
+            height: 48em;
+
+            & h2 {
+                margin-bottom: 8%;
+                font-size: 6em;
+                line-height: 1.2em;
+            }
+        }
+
+        &__title {
+            margin: 0;
+        }
+
+        &__overlay {
+            height: 48em;
+        }
+    }
+
+    iframe {
+        height: 130px;
+        width: 41em;
+    }
+
+    .shows {
+        @include padding-top(768px);
+        
+        &__list {
+            @include padding(768px);
+            display: flex;
+            flex-direction: column;
+
+            &:first-child {
+                width: 50%;
+                justify-content: space-evenly;
+            }
+        }
+
+        &__group {
+            height: 10%;
+            display: inline-flex;
+            align-items: baseline;
+        }
+
+        &__button {
+            width: 20%;
+        }
+
+        &__value {
+            width: 10em;
+            margin: 0 5% 0 0;
+        }
+
+        &__titles {
+            margin: 0 1% 1% 0;
+            width: 14em;
+        }
+    }
+
+    .line {
+        margin: 1%;
+    }
+
+    .footer__logo {
+        margin-top: 4%;
+    }
+}
+
+// Desktop media query
+
+@media(min-width:1280px){ 
+
+    @include desktop-global;
+
+    .header {
+        padding: 0;
+        height: 60em;
+
+        &__image, .header__overlay, .header__text {
+            height: 60em;
+        }
+
+        &__titles {
+            margin-right: 15%;
+            display: block;
+        }
+
+        &__title {
+            margin-top: 4%;
+            
+            &-2 {
+                width: 7em;
+            }
+        }
+
+        &__text {
+            display: flex;
+            flex-direction: row;
+            top: 9%;
+            left: 5em;
+        }
+
+        &__iframe {
+            margin: 6% auto;
+        }
+    }
+
+    .shows {
+        &__section {
+            margin: 1% 6%;
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__list {
+            align-self: end;
+            margin: 6% 0 0 7%;
+            width: 90%;
+        }
+
+        &__title {
+            margin-left: 4%;
+        }
+
+        &__titles {
+            margin: 0 -2% 1% 0;
+            width: 16em;
+        }
+
+        &__button {
+            margin-top: 0;
+        }
+
+        &__group:first-child {
+            margin-bottom: 3%;
+        }
+    }
+
+    .line {
+        margin: 2%;
+        width: 85%;
+    }
+
+    .footer {
+        margin: 0;
+        padding-left: 8em;
+
+        &__text {
+            width: 63%;
+        }
+
+        &__title {
+            margin: 0px 8% 0 0
+        }
+
+        &__logo {
+            left: 73em;
+        }
+    }
+}

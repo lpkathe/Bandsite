@@ -1,0 +1,515 @@
+@import "partials/partial";
+@import "partials/typography";
+@import "./partials/global";
+
+
+// Mixin and tags
+html {
+    font-size: 10px;
+    @include mobile-fonts;
+}
+
+// Styles are being applied directly from tags
+
+article {
+    @include padding(320px);
+    @include padding-top(320px);
+}
+
+// Style are being applied from class
+
+.logo{
+    margin: 4% auto;
+    max-height: 20px;
+    max-width: 120px;
+}
+
+.header {
+    height: 18.5em;
+    width: auto;
+    position: relative;
+    color: $primary-color-3;
+
+    &__image{
+        top: 0;
+        left: 0;
+        margin: 0;
+        height: 18.5em;
+        width: 100vw;
+        position: absolute;
+        box-sizing: border-box;
+    }
+
+    &__title{
+        top: 0;
+        left: 0;
+        margin: 16% 0 0 5%;
+        position: absolute;
+    }  
+
+    &__overlay {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 50%;
+        position: absolute;
+        background-color: $primary-color-1;
+    }
+}
+
+.section1 {
+    padding-top: 2%;
+
+    &__title {
+        margin: 01% 0;
+        line-height: 2em;
+    }
+
+    &__image{
+        height: 15em;
+        width: 100%;
+    }
+
+    &__text { // Se modifica para mayor similitud con el mockup
+        font-size: 1.4em;
+        font-weight: bold;
+        text-align: justify;
+        line-height: 1.7em;
+        word-spacing: 3px;
+    }
+}
+
+.section2 {
+    padding-top: 0.4em;
+
+    &__title {
+        margin: 0;
+    }
+
+    &__paragraph {
+        margin-top: 0.6em;
+        font-size: 1.4em;
+        line-height: 1.4em;
+    }
+}
+
+.section3 {
+    margin-top: 1.6em;
+    padding-top: 0;
+    background-color: $secondary-color-2;
+    
+    &__img {
+        padding-bottom: 1.6em;
+        width: 100%;
+    }
+
+    &__title {
+        margin-bottom: 0%;
+        padding-top: 2%;
+        line-height: 2.2em;
+    }
+}
+
+.section4 {
+    padding-top: 1.6em;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        margin: 0;
+        line-height: 1em;
+    }
+
+    &__new-comment {
+        margin: 0;
+        display: flex;
+    }
+}
+
+.form {
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+    &__list {
+        margin-top: 8%;
+        padding-left: 5%;
+        list-style: none;
+    }
+    
+    &__label {
+        margin-top: 3%;
+        display: flex;
+        flex-direction: column;
+        color: $primary-color-2; // color: $secondary-color-2; Este es el color según la guía, pero se utiliza el color primario para dar mayor proximidad al mockup
+    }
+        
+    &__item-2 {
+        margin-top: 2em;
+    }
+
+    &__input {
+        font-size: 1.3em; // Aumento el valor en comparación a la guía para dar proximidad al mockup
+        margin-top: 4px;
+        padding: 0.7em; // Según la guía es 1.2em, se cambia por similitud al mockup
+        //height: inherit;
+        //min-height: 3.6em; No se aplica para lograr similitud al mockup
+        width: 60vw;
+        border: 1px solid $secondary-color-2;
+        border-radius: 4px;
+
+        &:active {
+            border-color: $primary-color-1;
+        }
+
+        &:invalid {
+            border-color: #D22D2D;
+        }
+
+    }
+
+    &__comment {
+        min-height: 3.6em;
+        height: 6em;
+    }
+
+    &__button {
+        margin-right: 3%;
+        width: 74%;
+        align-self: flex-end;
+        @include button;
+
+        &:hover {
+            background-color: $secondary-color-1;
+        }
+    }
+
+    &__input {
+        outline-color: $primary-color-1;
+        }
+}
+
+.line {
+    @include line;
+} 
+
+.comment__box {
+    display: flex;
+}
+
+.user {
+    &__picture {
+        margin: 14% 5% 0 0;
+        height: 3.6em;
+        width: 4em;
+        border-radius: 50%;
+        background-color: $secondary-color-2;
+    }
+
+    &__form {
+        width: 90%;
+    }
+
+    &__info {
+        margin: 0;
+        width: 98%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__name {
+        margin: 1% 0 0.2em 0;
+        width: fit-content;
+    }
+
+    &__date {
+        margin-bottom: 0.2em;
+        width: fit-content;
+        color: $primary-color-2;
+    }
+
+    &__comment {
+        line-height: 1.5em; //Se modifica por mockup
+    }
+
+    &__box {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__first-line {
+        display: flex;
+    }
+}
+
+// Tablet meria query
+
+@media(min-width:768px){ 
+
+    @include tablet-global; // Contiene el media query con los estilos de global
+
+    article{
+        @include padding(768px);
+    }
+       
+    .header{
+        padding-top: 0;
+        height: 45em;
+
+        &__title{
+            margin: 0 0 0 5%;
+            font-family: "page-header";
+            font-size: 6em;
+            line-height: 6.8em;
+        }
+
+        &__image {
+            height: 45em;
+        }
+    }
+
+    .section1{
+        &__column {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        &__image {
+            height: 30em;
+        }
+
+        &__text { // Se modifica para mayor similitud con el mockup
+            word-spacing: 0;
+            font-size: 2em;
+            line-height: 1.5em;
+
+            &:last-child {
+                font-size: 1.8em;
+                font-weight: lighter;
+            }
+        }
+    }
+
+    .section2{
+        margin: 0 auto;
+        width: 80%;
+
+        &__title {
+            margin-left: 0.4em;
+        }
+
+        &__text {
+            display: flex;
+        }
+
+        &__paragraph {
+            margin: 1em;
+        }
+    }
+
+    .section3 {
+        @include padding-top(768px);
+        padding-bottom: 3%;
+        
+        &__title {
+            margin: 0 3%;
+            height: inherit;
+        }
+        
+        &__gallery {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        
+        &__img {
+            width: 21.7em;
+        }
+    }
+
+    .section4 {
+        @include padding(768px);
+        
+        &__title {
+            padding: 5% 0 0 2%;
+        }
+
+        &__new-comment {
+            width: 93%;
+            justify-content: flex-end;
+        }
+
+        & hr:first-child {
+            width: 80%;
+            margin: 3em auto;
+        }
+    }
+
+    .user {
+        &__picture {
+            margin: 2% 2% 0 0;
+            height: 48px; //Se coloca en pixeles porque es una medida fija
+            width: 5em;
+            
+            // Primera imagen de usuario se que muestra en el formulario
+            &1 {
+                margin-top: 7em;
+                margin-right: 0;
+            }
+
+
+            // Imágenes de usuario que se muestran en el historial de comentarios
+            &2 {
+                margin: 2% 2% 0 0;
+                width: 3.6em;
+            }
+        }
+
+        &__name {
+            font-size: 1.6em;
+            line-height: 0.2em;
+        }
+    }
+
+    .form {
+        width: 83%;
+
+        &__comment {
+            height: 3em;
+        }
+
+        &__button {
+            margin-right: 11%;
+            width: 20%;
+        }
+    }
+
+    .comment {
+        &__container {
+            margin: 0 auto;
+            width: 80%;
+        }
+    }
+}
+
+// Desktop media query
+
+@media(min-width:1280px){ 
+
+    @include desktop-global;
+
+    .header {
+        height: 60em;
+        &__image, .header__overlay, .header__title {
+            height: 60em;
+        }
+
+        &__title {
+            margin: 4% 9%;
+        }
+    }
+
+    .section1{
+      margin: 0 auto;
+      width: 85%;
+
+      &__title {
+        margin: 0 0 2% 0;
+      }
+  
+      &__image {
+        height: 50em;
+      }
+  
+      &__text {
+        margin-top: 1.6em;
+        width: 83%;
+        font-size: 2.6em;
+      }
+    }
+  
+    .section2 {
+      margin: 0 auto;
+      width: 68%;
+    }
+  
+    .section3 {
+        width: 100%;
+        padding: 48px 10% 36px 10%;
+
+        &__title {
+            padding: 0 0 3% 0;
+        }
+
+        &__img {
+            width: 40em;
+            justify-content: space-between;
+        }
+    }
+
+    .section4 {
+        display: flex;
+        justify-content: center;
+
+        &__new-comment {
+            justify-content: center;
+        }
+    }
+
+    .form {
+        width: 43em;
+        justify-content: center;
+
+        &__input {
+            width: 25em;
+        }
+
+        &__button {
+            margin: 0px 33%;
+            height: 3em;
+            width: 11em;
+        }
+
+        &__name {
+            height: 2em;
+        }
+
+        &__comment {
+            height: 6em;
+        }
+    }
+
+    .user__picture {
+        margin-top: 6em;
+    }
+
+    .line {
+        margin: 2% 27%;
+        width: 48em;
+    }
+
+    .comment {
+        &__container {
+            width: 53em;
+            margin-bottom: 2%;
+
+            & hr {
+                margin: 2% 0;
+                width: 50em;
+            }
+
+            & p {
+                margin-top: 1em;
+            }
+        }
+
+        &__box {
+            width: 46em;
+        }
+    }
+}
