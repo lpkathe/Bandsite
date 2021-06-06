@@ -172,7 +172,7 @@ article {
     
         &__button {
             margin-right: 3%;
-            width: 74%;
+            width: 100%;
             align-self: flex-end;
             @include button;
     
@@ -205,6 +205,10 @@ article {
             width: 4em;
             border-radius: 50%;
             background-color: $secondary-color-2;
+
+            &--2 {
+                margin: 4% 5% 0 0;
+            }
         }
     
         &__form {
@@ -216,7 +220,7 @@ article {
             width: 98%;
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: baseline;
         }
     
         &__name {
@@ -246,6 +250,10 @@ article {
             height: 3em;
             width: 3em;
             cursor: pointer;
+
+            &--counter {
+                margin-left: 2%;
+            }
         }
     }
 

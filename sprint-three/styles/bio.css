@@ -73,7 +73,7 @@
   .footer__info {
     margin-bottom: 6%; }
   .footer__copyright {
-    margin: 4% 0 1% 0; }
+    margin: 0 0 1% 0; }
   .footer--strong-text {
     font-weight: bolder; }
   .footer__icons {
@@ -85,6 +85,8 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
+  .footer__text {
+    margin-bottom: 14%; }
 
 .link--inactive {
   -ms-flex-item-align: center;
@@ -264,7 +266,7 @@ article {
       height: 6em; }
     .section4__form__button {
       margin-right: 3%;
-      width: 74%;
+      width: 100%;
       -ms-flex-item-align: end;
           align-self: flex-end;
       margin-top: 2%;
@@ -298,6 +300,8 @@ article {
     width: 4em;
     border-radius: 50%;
     background-color: #E1E1E1; }
+    .section4__user__picture--2 {
+      margin: 4% 5% 0 0; }
   .section4__user__form {
     width: 90%; }
   .section4__user__info {
@@ -309,9 +313,9 @@ article {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline; }
   .section4__user__name {
     margin: 1% 0 0.2em 0;
     width: -webkit-fit-content;
@@ -340,6 +344,8 @@ article {
     height: 3em;
     width: 3em;
     cursor: pointer; }
+    .section4__user__likes--counter {
+      margin-left: 2%; }
   .section4__button--remove {
     margin-right: 15%;
     width: 40%;
