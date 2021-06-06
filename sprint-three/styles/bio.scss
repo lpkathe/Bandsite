@@ -186,9 +186,16 @@ article {
         }  
     }      
 
-    &__comment__box {
+    &__comments {
+        &__box {
         display: flex;
-        position: relative;
+        }
+
+        &__mini-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
     
     &__user {
@@ -239,11 +246,12 @@ article {
             height: 3em;
             width: 3em;
             cursor: pointer;
-            position: absolute;
         }
     }
 
     &__button--remove {
+        margin-right: 15%;
+        width: 40%;
         @include button;
         align-self: center;
     }

@@ -21,24 +21,14 @@
 
 .nav {
   margin: 0;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   width: 100vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   background-color: #323232; }
   .nav__options {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around; }
+    justify-content: space-around; }
   .nav__link {
     text-decoration: none;
     cursor: pointer;
@@ -79,37 +69,21 @@
   .footer__icons {
     margin-bottom: 7%;
     width: 40%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
+    justify-content: space-between; }
 
 .link--inactive {
-  -ms-flex-item-align: center;
-      align-self: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-self: center;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   font-weight: bolder; }
   .link--inactive a {
     color: #AFAFAF; }
 
 .link--active {
-  -ms-flex-item-align: center;
-      align-self: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-self: center;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   color: #ffffff;
   font-weight: bolder; }
   .link--active a {
@@ -157,8 +131,7 @@ html {
     height: 31em;
     width: 100vw;
     position: absolute;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box; }
+    box-sizing: border-box; }
   .header__text {
     top: 0;
     left: 0;
@@ -233,13 +206,8 @@ html {
 @media (min-width: 768px) and (min-width: 768px) {
   .nav {
     max-height: 7em;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row; }
+    align-items: center;
+    flex-direction: row; }
     .nav__options {
       margin-left: 2%;
       width: 20%; }
@@ -247,8 +215,6 @@ html {
       line-height: 4.5em; }
       .nav__link__container {
         font-size: 1.4em;
-        width: -webkit-fit-content;
-        width: -moz-fit-content;
         width: fit-content;
         margin: 0; }
 
@@ -260,26 +226,17 @@ html {
     padding-right: 3.6em;
     padding-top: 4.8em;
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
+    flex-direction: column; }
     .footer__title {
       margin: 0;
       line-height: 1em;
       font-size: 2.7em;
-      width: -webkit-fit-content;
-      width: -moz-fit-content;
       width: fit-content;
       display: inline-block; }
     .footer__text {
       margin-top: 2%;
       padding-bottom: 0;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
       font-size: 0.8em; }
     .footer__logo {
@@ -291,23 +248,15 @@ html {
     .footer__icons {
       margin: 0 0 0 5%;
       width: 25%;
-      display: -webkit-inline-box;
-      display: -ms-inline-flexbox;
       display: inline-flex;
       font-size: 1.7em; }
     .footer__info {
       margin-right: 7%; }
     .footer__social-network {
       width: 50%;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: end;
-          -ms-flex-pack: end;
-              justify-content: end;
-      -webkit-box-align: end;
-          -ms-flex-align: end;
-              align-items: flex-end; } }
+      justify-content: end;
+      align-items: flex-end; } }
 @media (min-width: 768px) {
   .header {
     height: 48em; }
@@ -333,29 +282,16 @@ html {
     .shows__list {
       padding-left: 3.6em;
       padding-right: 3.6em;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column; }
+      flex-direction: column; }
       .shows__list:first-child {
         width: 50%;
-        -webkit-box-pack: space-evenly;
-            -ms-flex-pack: space-evenly;
-                justify-content: space-evenly; }
+        justify-content: space-evenly; }
     .shows__group {
       height: 10%;
-      display: -webkit-inline-box;
-      display: -ms-inline-flexbox;
       display: inline-flex;
-      -webkit-box-align: baseline;
-          -ms-flex-align: baseline;
-              align-items: baseline; }
+      align-items: baseline; }
       .shows__group--desktop {
-        display: -webkit-inline-box;
-        display: -ms-inline-flexbox;
         display: inline-flex; }
       .shows__group--mobile {
         display: none; }
@@ -419,13 +355,8 @@ html {
       .header__title--2 {
         width: 7em; }
     .header__text {
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
+      flex-direction: row;
       top: 9%;
       left: 5em; }
     .header__iframe {
@@ -433,16 +364,10 @@ html {
 
   .shows__section {
     margin: 1% 6%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row; }
+    flex-direction: row; }
   .shows__list {
-    -ms-flex-item-align: end;
-        align-self: end;
+    align-self: end;
     margin: 6% 0 0 7%;
     width: 90%; }
   .shows__title {
@@ -458,3 +383,5 @@ html {
   .line {
     margin: 2%;
     width: 85%; } }
+
+/*# sourceMappingURL=shows.css.map */

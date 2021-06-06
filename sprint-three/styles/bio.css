@@ -278,11 +278,20 @@ article {
         background-color: #000000; }
     .section4__form__input {
       outline-color: #323232; }
-  .section4__comment__box {
+  .section4__comments__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .section4__comments__mini-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    position: relative; }
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .section4__user__picture {
     margin: 14% 5% 0 0;
     height: 3.6em;
@@ -330,9 +339,10 @@ article {
     right: 1.5%;
     height: 3em;
     width: 3em;
-    cursor: pointer;
-    position: absolute; }
+    cursor: pointer; }
   .section4__button--remove {
+    margin-right: 15%;
+    width: 40%;
     margin-top: 2%;
     height: 40px;
     background-color: #323232;

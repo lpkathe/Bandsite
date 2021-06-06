@@ -37,7 +37,7 @@ const getComments = () => {
 function addComment(comment) {
   // create new elements
   const container = document.createElement('div');
-  container.className = "section4__comment__box";
+  container.className = "section4__comments__box";
   container.id = comment.id;
   const image = document.createElement('p');
   image.className = "section4__user__picture section4__user__picture--2";
@@ -71,15 +71,18 @@ function addComment(comment) {
   container.appendChild(userForm);
 
   const commentWrapper = document.createElement('div');
-  commentWrapper.className = "section4__comment__sub-container";
+  commentWrapper.className = "section4__comments__sub-container";
+
+  const commentWrapper2 = document.createElement('div');
+  commentWrapper2.className = "section4__comments__mini-container";
 
   const commentLike = document.createElement('img');
   commentLike.className = "section4__user__likes";
-  commentLike.setAttribute("src", "../assets/Icons/thumb-up.png");
+  commentLike.setAttribute("src", "../assets/Icons/SVG/icon-like.svg");
 
   const likeCounter = document.createElement("p");
   likeCounter.className = "section4__user__likes--counter";
-  likeCounter.innerText = `${comment.likes} likes`;
+  likeCounter.innerText = `${comment.likes}  Likes`;
 
   const commentDelete = document.createElement('button');
   commentDelete.innerText = "Remove";
@@ -95,9 +98,10 @@ function addComment(comment) {
   const divider = document.createElement('hr');
   divider.className = "line";
   commentWrapper.appendChild(container);
-  commentWrapper.appendChild(commentDelete);
-  commentWrapper.appendChild(likeCounter);
-  commentWrapper.appendChild(commentLike);
+  commentWrapper.appendChild(commentWrapper2);
+  commentWrapper2.appendChild(commentDelete);
+  commentWrapper2.appendChild(commentLike);
+  commentWrapper2.appendChild(likeCounter);
   commentWrapper.appendChild(divider);
 
   newcomments.insertBefore(commentWrapper, newcomments.firstChild);
