@@ -14,11 +14,13 @@
 <body>
     <main class="main">
         <nav class="nav">
-            <a class="logo" href="index.html"><img class="logo" src="./assets/Logo/Logo-bandsite.svg"
+            <a class="logo__link" href="index.html"><img class="logo" src="./assets/Logo/Logo-bandsite.svg"
                     alt="Logo-bandsite"></a>
             <div class="nav__options">
-                <h3 class="link-active"><a class="nav__link" href="./index.html">Biography</a></h3>
-                <h3 class="link-inactive"> <a class="nav__link" href="../sprint-two /pages/shows.html">Shows</a>
+                <h3 class="link--active nav__link__container"><a class="nav__link" href="./index.html">Biography</a>
+                </h3>
+                <h3 class="link--inactive nav__link__container"> <a class="nav__link"
+                        href="../sprint-three/pages/shows.html">Shows</a>
                 </h3>
             </div>
         </nav>
@@ -77,109 +79,71 @@
             <article class="section4">
                 <h2 class="section4__title">Join the Conversation</h2>
                 <div class="section4__new-comment">
-                    <img class="user__picture user__picture1" src="./assets/Images/Mohan-muruge.jpg" alt="User Picture">
-<!--FORM-->                    
-                    <form id=form action="#" class="form">
-                        <ul id="commentList"class="form__list">
+                    <img class="section4__user__picture user__picture--1" src="./assets/Images/Mohan-muruge.jpg"
+                        alt="User Picture">
+                    <!--FORM-->
+                    <form id="form" class="section4__form" action="#">
+
+                        <ul class="section4__form__list">
                             <li>
-                                <label class="form__label">NAME <input class="form__input form__name" type="text"
+                                <label class="section4__form__label">NAME <input required="true" name="user"
+                                        class="section4__form__input section4__form__name" type="text"
                                         placeholder="Enter your name"></label>
                             </li>
-                            <li class="form__item-2">
-                                <label class="form__label">COMMENT<textarea class="form__input form__comment"
-                                        placeholder="Add a new comment"></textarea></label>
+                            <li class="section4__form__item--2">
+                                <label class="section4__form__label">COMMENT<textarea
+                                        class="section4__form__input section4__form__comment" required="true"
+                                        name="commentText" placeholder="Add a new comment"></textarea></label>
+                                <button class="section4__form__button">COMMENT</button>
                             </li>
                         </ul>
                     </form>
                 </div>
-                <button class="form__button">COMMENT</button>
                 <hr class="line">
-                <div class="comment__container">
-                    <div class="comment__box">
-                        <p class="user__picture user__picture2"></p>
-                        <div class="user__form">
-                            <div class="user__info">
-                                <h3 class="user__name">Connor Walton</h3>
-                                <p class="user__date">02/17/2021</p>
-                            </div>
-                            <p class="user__comment">This is art. This is inexplicable magic expressed in the
-                                purest
-                                way, everything that
-                                makes up
-                                this majestic work deserves reverence. Let us appreciate this for what it is and
-                                what it
-                                contains.</p>
-                        </div>
-                    </div>
-                    <hr class="line">
-                    <div class="comment__box">
-                        <p class="user__picture user__picture2"></p>
-                        <div class="user__form">
-                            <div class="user__info">
-                                <h3 class="user__name">Emilie Beach</h3>
-                                <p class="user__date">01/09/2021</p>
-                            </div>
-                            <p class="user__comment">I feel blessed to have seen them in person. What a show!
-                                They
-                                were just perfection.
-                                If
-                                there
-                                was one day of my life I could relive, this would be it. What an incredible day.
-                            </p>
-                        </div>
-                    </div>
-                    <hr class="line">
-                    <div class="comment__box">
-                        <p class="user__picture user__picture2"></p>
-                        <div class="user__form">
-                            <div class="user__info">
-                                <h3 class="user__name">Miles Acosta</h3>
-                                <p class="user__date">12/20/2020</p>
-                            </div>
-                            <p class="user__comment">I can't stop listening. Every time I hear one of their songs -
-                                the vocals - it gives
-                                me
-                                goosebumps. Shivers straight down my spine. What a beautiful expression of
-                                creativity.
-                                Can't
-                                get enough.</p>
-                        </div>
-                    </div>
-                    <hr class="line">
+                <div id="commentList" class="section4__comment__container">
                 </div>
             </article>
         </section>
         <footer class="footer">
-            <h2 class="footer__title">Get in Touch</h2>
-            <div class="icons">
-                <a href="https://www.instagram.com/"><img src="./assets/Icons/SVG/Icon-instagram.svg"
-                        alt="Instagram"></a>
-                <a href="https://www.facebook.com/"><img src="./assets/Icons/SVG/Icon-facebook.svg" alt="Facebook"></a>
-                <a href="https://twitter.com/"><img src="./assets/Icons/SVG/Icon-twitter.svg" alt="Twitter"></a>
+            <div class="footer__social-network">
+                <h2 class="footer__title">Get in Touch</h2>
+                <div class="footer__icons">
+                    <a class="footer__links" href="https://www.instagram.com/"><img
+                            src="./assets/Icons/SVG/Icon-instagram.svg" alt="Instagram"></a>
+                    <a class="footer__links" href="https://www.facebook.com/"><img
+                            src="./assets/Icons/SVG/Icon-facebook.svg" alt="Facebook"></a>
+                    <a class="footer__links" href="https://twitter.com/"><img src="./assets/Icons/SVG/Icon-twitter.svg"
+                            alt="Twitter"></a>
+                </div>
             </div>
             <div class="footer__text">
-                <div>
-                    <p class="strong-text">Cam Adams <span class="strong-text">The Bees Knees Management</span></p>
+                <div class="footer__info">
+                    <p class="footer--strong-text">Cam Adams <span class="footer--strong-text">The Bees Knees
+                            Management</span></p>
                     <p>503 Broadway Penthouse <span>New York, NY 10012, USA</span></p>
-                    <p><a href="mailto:info@thebeesknees.com">info@thebeesknees.com</a></p>
+                    <p><a class="footer__links" href="mailto:info@thebeesknees.com">info@thebeesknees.com</a></p>
                 </div>
-                <div>
-                    <p class="strong-text">Pearl Gregg<span class="strong-text">Limitless Artist Group</span></p>
+                <div class="footer__info">
+                    <p class="footer--strong-text">Pearl Gregg<span class="footer--strong-text">Limitless Artist
+                            Group</span></p>
                     <p>Booking Agent for<span>US / South America / Japan</span></p>
-                    <p><a href="mailto:pearl.gregg@limitlessag.com">pearl.gregg@limitlessag.com</a></p>
+                    <p><a class="footer__links"
+                            href="mailto:pearl.gregg@limitlessag.com">pearl.gregg@limitlessag.com</a></p>
                 </div>
-                <div>
-                    <p class="strong-text">Carson Whyte<span class="strong-text">ARCH Entertainment</span></p>
+                <div class="footer__info">
+                    <p class="footer--strong-text">Carson Whyte<span class="footer--strong-text">ARCH
+                            Entertainment</span></p>
                     <p>Booking Agent for<span>UK / EU / AU</span></p>
-                    <p><a href="mailto:cwhyte@archentertainment.com">cwhyte@archentertainment.com</a></p>
+                    <p><a class="footer__links"
+                            href="mailto:cwhyte@archentertainment.com">cwhyte@archentertainment.com</a></p>
                 </div>
             </div>
-            <img class="logo footer__logo" src="./assets/Logo/Logo-bandsite.svg" alt="Logo-Footer">
-            <p class="footer__copyright">Copyright The Bees Knees © 2021 All Rights Reserved</p>
+            <a class="footer__logo" href="../sprint-three/index.html"><img class="logo"
+                    src="../sprint-three/assets/Logo/Logo-bandsite.svg" alt="Logo-bandsite"></a>
+            <p class="footer__copyright">Copyright The Bees Knees ©️ 2021 All Rights Reserved</p>
         </footer>
     </main>
- 
-    <script src="./scripts/index-page.js"></script> 
+    <script src="./scripts/index-page.js"></script>
 </body>
 
 </html>

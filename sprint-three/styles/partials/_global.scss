@@ -2,7 +2,6 @@
 @import "partial";
 
 .logo{
-  margin: 4% auto;
   @include logo-size;
 }
 
@@ -14,34 +13,36 @@
   flex-direction: column;
   background-color: $primary-color-1;
 
+  &__options {
+    display: flex;
+    justify-content: space-around;
+  }
+
   &__link {
     @include link-style;
 
     &:hover {
       color: $secondary-color-2;
     }
-  }
-  
-  &__options {
-      display: flex;
-      justify-content: space-around;
-
-      & h3 {
-        margin: 0;
-        padding: 0;
-        height: inherit;
-        width: 50vw;
-        text-align: center;
-      }
+    
+    &__container {
+      margin: 0;
+      padding: 0;
+      height: inherit;
+      width: 50vw;
+      text-align: center;
+    }
   }
 }
 
 .footer {
-  padding-bottom: 1%;
+  @include padding(320px);
+  padding-top: 1em;
+  padding-bottom: 1.5%;
   background-color:$primary-color-1;
   color: $primary-color-3;
 
-  & a {
+  &__links {
     @include link-style;
   }
 
@@ -55,35 +56,30 @@
       margin: 2% 0 0 0;
       font-weight: normal;
   }
-
-  &__text {
-      padding-bottom: 9%;
-  }
   
   &__info {
     margin-bottom: 6%;
   }
 
-  &__logo {
-    margin-top: 15%;
+  &__copyright {
+    margin: 4% 0 1% 0;
+  }
+
+  &--strong-text{
+    font-weight: bolder;
+  }
+
+  &__icons{
+    margin-bottom: 7%;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
   }
 }
 
-.strong-text{
-  font-weight: bolder;
-}
-
-.icons{
-  margin-bottom: 7%;
-  width: 40%;
-  display: flex;
-  justify-content: space-between;
-}
-
-
 // Special classes for active section 
 
-.link-inactive {
+.link--inactive {
    align-self: center;
    display: flex;
    flex-direction: column;
@@ -94,12 +90,16 @@
    }
 }
 
-.link-active {
+.link--active {
   align-self: center;
   display: flex;
   flex-direction: column;
   color: $primary-color-3;
   font-weight: bolder;
+  
+  & a {
+    height: inherit;
+  }
 
   &::after {
     width: 100%;   
@@ -117,41 +117,41 @@
     html {
       @include tablet-desktop-fonts;
     }
-
-    .logo {
-      margin: 4%;
-    }
     
     .nav {
-      height: 7em;
+      max-height: 7em;
       align-items: center;
       flex-direction: row;
       
       &__options {
-          margin-left: 5em;
-          width: 20%;
-          height: 100%;
+        margin-left: 2%;
+        width: 20%;
       }
-      
-      & h3 {
+
+      &__link {
+        line-height: 4.5em;
+
+        &__container {
           font-size: 1.4em; //It decreases so it can coincide with the mockup.
           width: fit-content;
+          margin: 0;
+        }
       }
     }
 
-
-    .link-inactive {
+    .link--inactive, .link--active {
       margin: auto;
     }
     
     .footer {
-      padding: 5% 5% 0 5%;
-      width: 100%;
-      display: inline-block;
+      @include padding(768px);
+      @include padding-top(768px);
       position: relative;
+      display: flex;
+      flex-direction: column;
       
       &__title {
-          margin: 0 3% 0 0;
+          margin: 0;
           line-height: 1em;
           font-size: 2.7em;
           width: fit-content;
@@ -159,29 +159,39 @@
       }
       
       &__text {
-          margin-top:2%;
-          padding-bottom: 0;
-          display: flex;
-          font-size: 0.8em;
-          justify-content: space-between;
+        margin-top:2%;
+        padding-bottom: 0;
+        display: flex;
+        font-size: 0.8em;
       }
       
       &__logo {
-          top: 1em;
-          right: 5.5em;
-          position: absolute;
+        top: 5.5em;
+        right: 3em;
+        position: absolute;
       }
       
       &__copyright {
-          font-size: 1em;
+        font-size: 1em;
       }
-    }
+      
+      &__icons {
+        margin: 0 0 0 5%;
+        width: 25%;
+        display: inline-flex;
+        font-size: 1.7em;
+      }
 
-    .icons {
-      margin-bottom: 0;
-      width: 13%;
-      display: inline-flex;
-      font-size: 1.7em;
+      &__info {
+        margin-right: 7%;
+      }
+
+      &__social-network {
+        width: 50%;
+        display: flex;
+        justify-content: end;
+        align-items: flex-end;
+      }
     }
   }
 }
@@ -200,18 +210,10 @@
     }
 
     .footer {
-      &__title {
-          margin: 0px 11% 0 0;
-      }
+      padding: 4% 4% 2% 4%;
 
-      &__text {
-          width: 69%;
-      }
-    }
-
-    .nav {
-      &__options{
-        height: fit-content;
+      &__icons {
+        margin: 0 0 0 15%;
       }
     }
   }

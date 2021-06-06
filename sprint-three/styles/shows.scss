@@ -8,15 +8,15 @@ html {
     @include mobile-fonts;
 }
 
+.logo__link {
+    margin: 4% auto; // Centra el logo de la parte superior y que corresponde a mobile
+}
+
 .header {
     height: 31em;
     width: 100%;
     color: $primary-color-3;
     position: relative;
-
-    & h3 {
-        font-weight: lighter;
-    }
 
     &__title{
         line-height: 1.5em;
@@ -85,21 +85,18 @@ html {
             background-color: $secondary-color-1;
         }
     }
+
+    &__groups--desktop {
+        display: none;
+    }
 }
 
 .line {
     @include line;
 }
 
-.footer {
-    margin-top: 5%;
-    @include padding(320px);
-
-}
-
 // Tablet media query
 @media(min-width:768px){ 
-    
     @include tablet-global; // Styles are in global.
 
     .header{
@@ -112,26 +109,26 @@ html {
         &__text{
             margin: 2% 0 0 5%;
             height: 48em;
-
-            & h2 {
+        }
+        
+        &__title {
+            margin: 0;
+            
+            &-2 {
                 margin-bottom: 8%;
                 font-size: 6em;
                 line-height: 1.2em;
             }
         }
 
-        &__title {
-            margin: 0;
-        }
-
         &__overlay {
             height: 48em;
         }
-    }
-
-    iframe {
-        height: 130px;
-        width: 41em;
+        
+        &__iframe {
+            height: 130px;
+            width: 41em;
+        }
     }
 
     .shows {
@@ -152,6 +149,14 @@ html {
             height: 10%;
             display: inline-flex;
             align-items: baseline;
+
+            &--desktop {
+                display: inline-flex;
+            }
+        
+            &--mobile {
+                display: none;
+            }
         }
 
         &__button {
@@ -172,16 +177,11 @@ html {
     .line {
         margin: 1%;
     }
-
-    .footer__logo {
-        margin-top: 4%;
-    }
 }
 
 // Desktop media query
 
 @media(min-width:1280px){ 
-
     @include desktop-global;
 
     .header {
@@ -200,7 +200,7 @@ html {
         &__title {
             margin-top: 4%;
             
-            &-2 {
+            &--2 {
                 width: 7em;
             }
         }
@@ -251,22 +251,5 @@ html {
     .line {
         margin: 2%;
         width: 85%;
-    }
-
-    .footer {
-        margin: 0;
-        padding-left: 8em;
-
-        &__text {
-            width: 63%;
-        }
-
-        &__title {
-            margin: 0px 8% 0 0
-        }
-
-        &__logo {
-            left: 73em;
-        }
     }
 }
