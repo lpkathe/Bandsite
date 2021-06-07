@@ -358,7 +358,7 @@ html {
     .footer__social-network {
       width: 31%; }
     .footer__logo {
-      right: 7em; } }
+      right: 23em; } }
 @media (min-width: 1280px) {
   .header {
     padding: 0;
@@ -399,7 +399,7 @@ html {
     margin-bottom: 3%; }
 
   .line {
-    margin: 2%;
+    margin: 2% 0;
     width: 85%; } }
 
 /*# sourceMappingURL=shows.css.map */
