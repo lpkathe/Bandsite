@@ -449,7 +449,7 @@ article {
         }
 
         &__title {
-            margin: 4% 9%;
+            margin: 8% 9%;
         }
     }
 
@@ -487,6 +487,10 @@ article {
         display: flex;
         justify-content: center;
 
+        &__title {
+            padding: 5% 0 0 13%;
+        }
+
         &__new-comment {
             justify-content: center;
         }
@@ -500,7 +504,7 @@ article {
             }
     
             &__button {
-                margin: 0px 33%;
+                margin: 0;
                 height: 3em;
                 width: 11em;
             }

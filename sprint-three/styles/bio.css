@@ -610,6 +610,12 @@ article {
     padding-right: 3.6em;
     padding-top: 4.8em; }
 
+  .logo__link {
+    margin-left: 10%; }
+
+  .nav__options {
+    width: 18%; }
+
   .footer {
     padding: 4% 4% 2% 4%; }
     .footer__icons {
@@ -620,7 +626,7 @@ article {
     .header__image, .header .header__overlay, .header .header__title {
       height: 72em; }
     .header__title {
-      margin: 4% 9%; }
+      margin: 8% 9%; }
 
   .section1 {
     margin: 0 auto;
@@ -648,6 +654,8 @@ article {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
+    .section4__title {
+      padding: 5% 0 0 13%; }
     .section4__new-comment {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
@@ -660,7 +668,7 @@ article {
       .section4__form__input {
         width: 25em; }
       .section4__form__button {
-        margin: 0px 33%;
+        margin: 0;
         height: 3em;
         width: 11em; }
       .section4__form__name {

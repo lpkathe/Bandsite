@@ -345,6 +345,12 @@ html {
     padding-right: 3.6em;
     padding-top: 4.8em; }
 
+  .logo__link {
+    margin-left: 10%; }
+
+  .nav__options {
+    width: 18%; }
+
   .footer {
     padding: 4% 4% 2% 4%; }
     .footer__icons {
