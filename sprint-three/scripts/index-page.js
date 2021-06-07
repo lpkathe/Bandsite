@@ -38,7 +38,7 @@ function addComment(comment) {
   // create new elements
   const container = document.createElement('div');
   container.className = "section4__comments__box";
-  container.id = comment.id;
+
   const image = document.createElement('p');
   image.className = "section4__user__picture section4__user__picture--2";
 
@@ -72,6 +72,7 @@ function addComment(comment) {
 
   const commentWrapper = document.createElement('div');
   commentWrapper.className = "section4__comments__sub-container";
+  commentWrapper.id = comment.id;
 
   const commentWrapper2 = document.createElement('div');
   commentWrapper2.className = "section4__comments__mini-container";
@@ -82,17 +83,17 @@ function addComment(comment) {
 
   const likeCounter = document.createElement("p");
   likeCounter.className = "section4__user__likes--counter";
-  likeCounter.innerText = `${comment.likes}  Likes`;
+  likeCounter.innerText = `${comment.likes} Likes`;
 
   const commentDelete = document.createElement('button');
   commentDelete.innerText = "Remove";
   commentDelete.className = "section4__button--remove";
   commentDelete.addEventListener("click", (event) => {
-    removeComment(event.target.parentNode.id);
+    removeComment(event.target.parentNode.parentNode.id);
   });
 
   commentLike.addEventListener("click", (event) => {
-    likeComment(event.target.parentNode.id);
+    likeComment(event.target.parentNode.parentNode.id);
   });
 
   const divider = document.createElement('hr');
@@ -138,34 +139,38 @@ function handleSubmit(event) {
 
 //Like implementation for comments.
 function likeComment(id) {
-  if (id !== undefined) {
-    axios
+  if (id === undefined || id === "") {
+    console.log("comment id to like not defined");
+    return;
+  }
+  axios
       .put(`${apiUrl}/comments/${id}/like?api_key=${apiKey}`)
       .then((response) => {
         if (response.status === 200) {
-          document.getElementById(id).querySelector(".section4__user__likes").innerText = response.data.likes + " likes";
+          document.getElementById(id).querySelector(".section4__user__likes--counter").innerText = response.data.likes + " Likes";
         } else {
           console.log(`Error trying to like commentId: ${id} status:${response.status} - ${response}`);
         }
       })
       .catch((error) => console.log(`error for like comment ${id}:` + error));
-  }
 }
 
 //Remove comment.
 function removeComment(id) {
-  if (id !== undefined) {
-    axios
-      .delete(`${apiUrl}/comments/${id}?api_key=${apiKey}`)
-      .then((response) => {
-        if (response.status === 200) {
-          document.getElementById(id).remove();
-        } else {
-          console.log(`Error removing commentId: ${id} status:${response.status} - ${response}`);
-        }
-      })
-      .catch((error) => console.log(`error for like comment ${id}:` + error));
+  if (id === undefined || id === "") {
+    console.log("comment id to remove not defined");
+    return;
   }
+  axios
+    .delete(`${apiUrl}/comments/${id}?api_key=${apiKey}`)
+    .then((response) => {
+      if (response.status === 200) {
+        document.getElementById(id).remove();
+      } else {
+        console.log(`Error removing commentId: ${id} status:${response.status} - ${response}`);
+      }
+    })
+    .catch((error) => console.log(`error for like comment ${id}:` + error));
 }
 
 //initial call to get comments  when first loaded.
