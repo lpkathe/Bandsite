@@ -24,7 +24,7 @@ html {
     }  
 
     &__iframe {
-        margin: 0 auto;
+        margin: 11% 0;
     }
 
     &__image{
@@ -61,9 +61,10 @@ html {
     }
 
     &__title {
+        margin-left: 4%;
+        margin-bottom: 0;
         font-size: 3.4em;
         line-height: 2em;
-        margin-bottom: 0;
     }
 
     &__titles {
@@ -88,6 +89,10 @@ html {
 
     &__group--desktop {
         display: none;
+    }
+
+    &__list {
+        margin-bottom: 4%
     }
 }
 

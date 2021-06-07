@@ -65,7 +65,6 @@ article {
     }
 
     &__image{
-        height: 15em;
         width: 100%;
     }
 
@@ -265,7 +264,6 @@ article {
     }
 }
 
-
 .line {
     @include line;
 } 
@@ -298,8 +296,8 @@ article {
 
     .section1{
         &__column {
-            width: 80%;
             margin: 0 auto;
+            width: 87%;
         }
 
         &__image {
@@ -336,11 +334,13 @@ article {
     }
 
     .section3 {
+        margin-top: 0;
         @include padding-top(768px);
         padding-bottom: 5.6em;
         
         &__title {
             margin: 0 3%;
+            padding-top: 0;
             height: inherit;
         }
         
@@ -370,11 +370,6 @@ article {
             justify-content: flex-end;
         }
 
-        & hr:first-child {
-            width: 80%;
-            margin: 3em auto;
-        }
-
         &__user {
             &__picture {
                 margin: 11% -1% 0 0;
@@ -399,6 +394,10 @@ article {
                 font-size: 1.6em;
                 line-height: 0.2em;
             }
+
+            &__comment {
+                margin-top: 0;
+            }
         }
     
         &__form {
@@ -419,11 +418,21 @@ article {
             }
         }
     
-        &__comment {
+        &__comments {
             &__container {
                 margin: 0 auto;
                 width: 80%;
             }
+        }
+    }
+
+    .line {
+        margin: 3em auto;
+        width: 100%;
+        align-self: center;
+
+        &--first {
+            width: 78%;
         }
     }
 }
