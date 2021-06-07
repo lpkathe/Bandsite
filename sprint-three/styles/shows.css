@@ -354,7 +354,11 @@ html {
   .footer {
     padding: 4% 4% 2% 4%; }
     .footer__icons {
-      margin: 0 0 0 15%; } }
+      width: 28%; }
+    .footer__social-network {
+      width: 31%; }
+    .footer__logo {
+      right: 7em; } }
 @media (min-width: 1280px) {
   .header {
     padding: 0;

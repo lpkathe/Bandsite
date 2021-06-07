@@ -229,7 +229,15 @@
       padding: 4% 4% 2% 4%;
 
       &__icons {
-        margin: 0 0 0 15%;
+        width: 28%;
+      }
+
+      &__social-network {
+        width: 31%;
+      }
+
+      &__logo {
+        right: 7em;
       }
     }
   }

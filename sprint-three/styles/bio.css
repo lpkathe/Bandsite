@@ -619,7 +619,11 @@ article {
   .footer {
     padding: 4% 4% 2% 4%; }
     .footer__icons {
-      margin: 0 0 0 15%; } }
+      width: 28%; }
+    .footer__social-network {
+      width: 31%; }
+    .footer__logo {
+      right: 7em; } }
 @media (min-width: 1280px) {
   .header {
     height: 72em; }
@@ -668,7 +672,7 @@ article {
       .section4__form__input {
         width: 25em; }
       .section4__form__button {
-        margin: 0;
+        margin: 1em 0;
         height: 3em;
         width: 11em; }
       .section4__form__name {
@@ -677,15 +681,15 @@ article {
         height: 6em; }
     .section4__user__picture {
       margin-top: 6em; }
-    .section4__comment__container {
+    .section4__comments__container {
       width: 53em;
       margin-bottom: 2%; }
-      .section4__comment__container hr {
+      .section4__comments__container hr {
         margin: 2% 0;
         width: 50em; }
-      .section4__comment__container p {
+      .section4__comments__container p {
         margin-top: 1em; }
-    .section4__comment__box {
+    .section4__comments__box {
       width: 46em; }
 
   .line {
