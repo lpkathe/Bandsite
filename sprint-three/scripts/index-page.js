@@ -78,7 +78,7 @@ function addComment(comment) {
 
   const commentLike = document.createElement('img');
   commentLike.className = "section4__user__likes";
-  commentLike.setAttribute("src", "../assets/Icons/SVG/icon-like.svg");
+  commentLike.setAttribute("src", "assets/Icons/SVG/icon-like.svg");
 
   const likeCounter = document.createElement("p");
   likeCounter.className = "section4__user__likes--counter";
